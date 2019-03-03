@@ -1,0 +1,9 @@
+{
+  "name": "treduler-server",
+  "version": "1.0.0",
+  "description": "Server Part Of Treduler Project",
+  "main": "init.js",
+  "repository": "https://github.com/mac-circle/treduler-back.git",
+  "author": "rontend",
+  "license": "MIT"
+}
