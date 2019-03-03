@@ -5,8 +5,6 @@ dotenv.config();
 const env = process.env.NODE_ENV || "dev";
 let PORT = 8001;
 
-console.log(env);
-
 if (env === "dev") {
   PORT = process.env.PORT_DEV;
 } else {
@@ -14,7 +12,7 @@ if (env === "dev") {
 }
 
 const listeningHandler = () => {
-  console.log(`Treduler server listening on port ${PORT}`);
+  console.log(`✅  Treduler server listening on port ${PORT}`);
 };
 
 app.listen(PORT, listeningHandler);
