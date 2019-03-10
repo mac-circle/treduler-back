@@ -16,7 +16,8 @@
   "scripts": {
     "dev": "nodemon --exec babel-node src/init.js",
     "build": "babel src --out-dir dist",
-    "start": "NODE_ENV=production node dist/init.js"
+    "start": "NODE_ENV=production node dist/init.js",
+    "prestart": "yarn install"
   },
   "dependencies": {
     "babel-core": "7.0.0-bridge.0",
