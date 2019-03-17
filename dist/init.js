@@ -10,6 +10,8 @@ var _dotenv2 = _interopRequireDefault(_dotenv);
 
 var _middlewares = require("./middlewares/middlewares");
 
+require("./sequelize");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _dotenv2.default.config();

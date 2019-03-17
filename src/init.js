@@ -1,6 +1,7 @@
 import app from "./app";
 import dotenv from "dotenv";
 import { handleListening } from "./middlewares/middlewares";
+import "./sequelize";
 dotenv.config();
 const env = process.env.NODE_ENV || "dev";
 let PORT = 8081;
