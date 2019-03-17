@@ -1,0 +1,32 @@
+{
+  "name": "treduler-server",
+  "version": "1.0.0",
+  "description": "This is our team's first project. Software application that makes devlopers easy to manage their project. ",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "nodemon --exec babel-node src/init.js",
+    "build": "babel src -d dist",
+    "start": "NODE_ENV=production node dist/init.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mac-circle/treduler-back.git"
+  },
+  "keywords": [
+    "treduler"
+  ],
+  "author": "rontend",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mac-circle/treduler-back/issues"
+  },
+  "homepage": "https://github.com/mac-circle/treduler-back#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "nodemon": "^1.18.10"
+  }
+}
