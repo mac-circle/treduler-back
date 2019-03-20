@@ -6,6 +6,7 @@ import helmet from "helmet";
 import cors from "cors";
 import ROUTES from "./routes/routes";
 import bodyParser from "body-parser";
+import cookieParser from "cookie-parser";
 
 const app = express();
 
@@ -16,6 +17,7 @@ app.use(morgan("dev"));
 app.use(bodyParser.json()); // for parsing application/json
 app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
 app.use(cors());
+app.use(cookieParser());
 app.use(ROUTES.apiRoute, API);
 
 // default showing part
