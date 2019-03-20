@@ -1,3 +1,6 @@
+import multer from "multer";
+const upload = multer();
+
 export const handleListening = PORT => {
   console.log(`✅ Treduler Server listening on port ${PORT}`);
 };
@@ -15,3 +18,6 @@ export const DataBaseConnectionSuccess = () => {
 export const DataBaseConnectionFailed = err => {
   console.error(`❌ Unablie to connect to the database: ${err}`);
 };
+
+export const middlewareForParsingMultipartFormData = upload.array();
+export const middlewareForParsingSinglePartFormData = upload.single();

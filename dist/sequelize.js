@@ -8,6 +8,8 @@ var _dotenv = require("dotenv");
 
 var _dotenv2 = _interopRequireDefault(_dotenv);
 
+var _middlewares = require("./middlewares/middlewares");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 _dotenv2.default.config();
@@ -19,10 +21,7 @@ var USERNAME = process.env.DB_DEV_USERNAME;
 var PASSWORD = process.env.DB_DEV_PASSWORD;
 var HOST = process.env.DB_ENV_HOST;
 
-console.log(env);
-
 if (env === "dev") {} else {
-  console.log("1");
   DBNAME = process.env.DB_PRD_DBNAME;
   USERNAME = process.env.DB_PRD_USERNAME;
   PASSWORD = process.env.DB_PRD_PASSWORD;
@@ -34,10 +33,4 @@ var sequelize = new _sequelize2.default(DBNAME, USERNAME, PASSWORD, {
   dialect: "postgres"
 });
 
-console.log("2");
-
-sequelize.authenticate().then(function () {
-  console.log("✅ Database connection has been established successfully.");
-}).catch(function (err) {
-  console.error("\u274C Unablie to connect to the database: " + err);
-});
+sequelize.authenticate().then(_middlewares.DataBaseConnectionSuccess).catch(_middlewares.DataBaseConnectionFailed);

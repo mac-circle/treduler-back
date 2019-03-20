@@ -4,3 +4,7 @@ export const testFN = (req, res, next) => {
   };
   res.json(result);
 };
+
+export const PostTest = (req, res, next) => {
+  res.json(req.body);
+};
