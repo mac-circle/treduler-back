@@ -7,3 +7,11 @@ export const HelloWorld = (req, res) => {
     `Hi, This is treduler server. We are composed of Shin dong gyu, Lee jung hyun, Park sung joon`
   );
 };
+
+export const DataBaseConnectionSuccess = () => {
+  console.log("✅ Database connection has been established successfully.");
+};
+
+export const DataBaseConnectionFailed = err => {
+  console.error(`❌ Unablie to connect to the database: ${err}`);
+};
