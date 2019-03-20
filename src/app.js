@@ -4,6 +4,7 @@ import morgan from "morgan";
 import API from "./apis";
 import helmet from "helmet";
 import cors from "cors";
+import ROUTES from "./routes/routes";
 
 const app = express();
 
@@ -12,9 +13,9 @@ const app = express();
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(cors());
-app.use("/api", API);
+app.use(ROUTES.apiRoute, API);
 
 // default showing part
-app.get("/", HelloWorld);
+app.get(ROUTES.basicSlash, HelloWorld);
 
 export default app;
