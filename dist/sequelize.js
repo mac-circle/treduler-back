@@ -21,12 +21,16 @@ var USERNAME = process.env.DB_DEV_USERNAME;
 var PASSWORD = process.env.DB_DEV_PASSWORD;
 var HOST = process.env.DB_ENV_HOST;
 
-if (env === "dev") {} else {
+if (env === "dev") {
+  console.log("kjdhskjshfkjshdfkj");
+} else {
   DBNAME = process.env.DB_PRD_DBNAME;
   USERNAME = process.env.DB_PRD_USERNAME;
   PASSWORD = process.env.DB_PRD_PASSWORD;
   HOST = process.env.DB_PRD_HOST;
 }
+console.log("asjkdkjash");
+console.log(HOST);
 
 var sequelize = new _sequelize2.default(DBNAME, USERNAME, PASSWORD, {
   host: HOST,
