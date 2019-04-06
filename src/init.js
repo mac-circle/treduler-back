@@ -8,6 +8,7 @@ let PORT = 8081;
 
 if (env === "production") {
   PORT = process.env.PRD_PORT;
+  console.log("asdasdasd");
 } else {
   PORT = process.env.DEV_PORT;
 }
