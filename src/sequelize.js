@@ -21,12 +21,18 @@ if (env === "dev") {
   HOST = process.env.DB_PRD_HOST;
 }
 
-const sequelize = new Sequelize(DBNAME, USERNAME, PASSWORD, {
+export const sequelize = new Sequelize(DBNAME, USERNAME, PASSWORD, {
   host: HOST,
-  dialect: "postgres"
+  dialect: "postgres",
+  pool: {
+    max: 5,
+    min: 0,
+    acquire: 30000,
+    idle: 10000
+  }
 });
 
 sequelize
   .authenticate()
-  .then(DataBaseConnectionSuccess)
+  .then(() => DataBaseConnectionSuccess(HOST))
   .catch(DataBaseConnectionFailed);

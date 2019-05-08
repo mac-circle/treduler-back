@@ -11,8 +11,10 @@ export const HelloWorld = (req, res) => {
   );
 };
 
-export const DataBaseConnectionSuccess = () => {
-  console.log("✅ Database connection has been established successfully.");
+export const DataBaseConnectionSuccess = host => {
+  console.log(
+    `✅ Database connection on ${host} has been established successfully.`
+  );
 };
 
 export const DataBaseConnectionFailed = err => {
