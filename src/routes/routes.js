@@ -15,6 +15,16 @@ const NEW_ACCOUNT = "/new-account";
 const VERIFY_ROUTE = "/verify";
 const REQUEST_VERIFY = "/get-request";
 
+// UNSPLASH
+
+const UNSPLASH_ROUTE = "/unsplash";
+const RANDOM_IMAGE = "/random-image";
+
+// THEY SAID SO
+
+const THEY_SAID_SO_ROUTE = "/quotes";
+const TSS_INSPIRE = "/inspire";
+
 const ROUTES = {
   basicSlash: BASIC_SLASH,
   apiRoute: API_ROUTE,
@@ -22,7 +32,11 @@ const ROUTES = {
   userRoute: USER_ROUTE,
   newAccount: NEW_ACCOUNT,
   verifyRoute: VERIFY_ROUTE,
-  requestVerify: REQUEST_VERIFY
+  requestVerify: REQUEST_VERIFY,
+  unsplashRoute: UNSPLASH_ROUTE,
+  randomImage: RANDOM_IMAGE,
+  theySaidSoRoute: THEY_SAID_SO_ROUTE,
+  tssInspire: TSS_INSPIRE
 };
 
 export default ROUTES;
