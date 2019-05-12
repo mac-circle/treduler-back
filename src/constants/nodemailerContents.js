@@ -34,7 +34,7 @@ export const htmlFN = token => {
       />
       <br />
       <a
-        href="http://treduler.com/${token}"
+        href="http://treduler.com/?tkn=${token}"
         target="_blank"
         rel="noopener noreferrer"
         style="text-decoration: none !important;"

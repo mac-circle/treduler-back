@@ -9,11 +9,13 @@ const TEST_ROUTE = "/test";
 
 const USER_ROUTE = "/user";
 const NEW_ACCOUNT = "/new-account";
+const USER_SIGNIN = "/sign-in";
 
 // VERIFY
 
 const VERIFY_ROUTE = "/verify";
 const REQUEST_VERIFY = "/get-request";
+const VERIFY_USER = "/verify-user";
 
 // UNSPLASH
 
@@ -36,7 +38,9 @@ const ROUTES = {
   unsplashRoute: UNSPLASH_ROUTE,
   randomImage: RANDOM_IMAGE,
   theySaidSoRoute: THEY_SAID_SO_ROUTE,
-  tssInspire: TSS_INSPIRE
+  tssInspire: TSS_INSPIRE,
+  verifyUser: VERIFY_USER,
+  userSignIn: USER_SIGNIN
 };
 
 export default ROUTES;

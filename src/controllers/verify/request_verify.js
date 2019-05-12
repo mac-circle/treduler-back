@@ -1,15 +1,14 @@
 import User from "../../models/user";
-import { verifyingJWT } from "../../utils/generatingJWT";
+import { verifyingJWT, generatingJWT } from "../../utils/generatingJWT";
 import { mailOptions, transporter } from "../../nodemailer";
-import { title, text, html, htmlFN } from "../../constants/nodemailerContents";
-import { hashingPassword } from "../../utils/hasingPassword";
+import { title, text, htmlFN } from "../../constants/nodemailerContents";
 
 const requestVerify = async (req, res, next) => {
   const token = req.headers.token;
   const id = verifyingJWT(token);
   try {
     const user = await User.findByPk(id);
-    const hashedUserEmailToken = await hashingPassword(user.email);
+    const hashedUserEmailToken = generatingJWT(user.email);
     const mailOption = mailOptions(
       user.email,
       title,
