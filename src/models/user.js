@@ -25,7 +25,12 @@ const User = sequelize.define("user", {
     defaultValue: false,
     comment: "This will be true after user verified their secret code"
   },
-  nickname: { type: Sequelize.STRING }
+  nickname: { type: Sequelize.STRING },
+  profileImage: {
+    type: Sequelize.STRING,
+    defaultValue: "",
+    comment: "User profile image url"
+  }
 });
 
 export default User;
